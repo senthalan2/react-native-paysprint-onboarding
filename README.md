@@ -1,26 +1,44 @@
 # react-native-paysprint-onboarding
 
-PaySprint Sdk for Android
+This is a React Native module that provides a seamless integration of the Paysprint Onboarding SDK into your React Native Android applications.
+
+For reference, you may check out the ([Pay Sprint Onboarding Mobile SDK](https://pay-sprint.readme.io/reference/onboarding-mobile-sdk)).
 
 ## Installation
 
-
 ```sh
-npm install react-native-paysprint-onboarding
+npm  install  react-native-paysprint-onboarding
 ```
-
 
 ## Usage
 
-
 ```js
-import { multiply } from 'react-native-paysprint-onboarding';
+
+import { startPaysprintOnBoarding } from  'react-native-paysprint-onboarding';
 
 // ...
 
-const result = multiply(3, 7);
-```
+const  handlePaySprintOnboarding  =  ()  =>  {
 
+	startPaysprintOnBoarding(
+		partnerId:  string,
+		partnerApiKey:  string,
+		merchantCode:  string,
+		merchantMobile:  string,
+		firmName:  string,
+		email:  string,
+		lat:  string,
+		lng:  string,
+		pipe:  string
+	).then(res  =>  {
+		console.log(res,  'Response');
+	}).catch(e  =>  {
+		console.log(e,  'Error');
+	});
+
+}
+
+```
 
 ## Contributing
 
@@ -33,5 +51,3 @@ const result = multiply(3, 7);
 MIT
 
 ---
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
