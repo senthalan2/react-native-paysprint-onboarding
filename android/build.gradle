@@ -7,6 +7,9 @@ buildscript {
     google()
     mavenCentral()
     maven { url "https://jitpack.io" }
+    flatDir {
+      dirs 'libs'
+    }
   }
 
   dependencies {
@@ -70,6 +73,9 @@ repositories {
   mavenCentral()
   google()
   maven { url "https://jitpack.io" }
+  flatDir {
+      dirs 'libs'
+    }
 }
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
