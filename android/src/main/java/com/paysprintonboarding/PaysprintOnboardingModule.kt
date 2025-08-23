@@ -55,6 +55,7 @@ class PaysprintOnboardingModule(reactContext: ReactApplicationContext) :
       putExtra("lng", lng)
       putExtra("firm", firmName)
       putExtra("email", email)
+      addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
     }
 
     currentActivity.startActivityForResult(intent, REQUEST_CODE)

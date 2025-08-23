@@ -18,8 +18,6 @@ import { startPaysprintOnBoarding } from  'react-native-paysprint-onboarding';
 
 // ...
 
-const  handlePaySprintOnboarding  =  ()  =>  {
-
 	startPaysprintOnBoarding(
 		partnerId:  string,
 		partnerApiKey:  string,
@@ -36,7 +34,6 @@ const  handlePaySprintOnboarding  =  ()  =>  {
 		console.log(e,  'Error');
 	});
 
-}
 
 ```
 
