@@ -16,7 +16,7 @@ npm  install  react-native-paysprint-onboarding
 
 #### 1. Add `.aar` dependency
 
-By default, the package includes the **Pay Sprint UAT Mobile SDK** `.aar` file inside `react-native-paysprint-onboarding/android/libs`.
+By default, the package includes the **Pay Sprint Live Mobile SDK** `.aar` file inside `react-native-paysprint-onboarding/android/libs`.
 
 If you want to use a different `.aar` file as mentioned in the ([Pay Sprint Onboarding Mobile SDK Docs](https://pay-sprint.readme.io/reference/onboarding-mobile-sdk)), follow the steps below:
 
