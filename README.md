@@ -38,7 +38,7 @@ The package will automatically resolve the path and use your `.aar` instead of t
 
 #### 2. Update gradle.properties
 
-Add the following line to your android/gradle.properties file in your project:
+Add the following line to your `android/gradle.properties` file in your project:
 
 ```properties
 android.enableJetifier=true
