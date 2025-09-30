@@ -44,7 +44,7 @@ Add the following line to your `android/gradle.properties` file in your project:
 android.enableJetifier=true
 ```
 
-✅ This tells Gradle to enable Jetifier, which helps with compatibility when using libraries that still depend on the old Android Support libraries.
+✅ This tells Gradle to enable Jetifier, which is required for compatibility with the Paysprint SDK, as it still depends on the old Android Support libraries.
 
 ## Usage
 
