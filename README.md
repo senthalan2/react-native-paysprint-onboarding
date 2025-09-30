@@ -36,6 +36,16 @@ If you want to use a different `.aar` file as mentioned in the ([Pay Sprint Onbo
 
 The package will automatically resolve the path and use your `.aar` instead of the bundled one.
 
+#### 2. Update gradle.properties
+
+Add the following line to your android/gradle.properties file in your project:
+
+```properties
+android.enableJetifier=true
+```
+
+✅ This tells Gradle to enable Jetifier, which helps with compatibility when using libraries that still depend on the old Android Support libraries.
+
 ## Usage
 
 ```js
