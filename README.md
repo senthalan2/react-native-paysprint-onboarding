@@ -30,7 +30,7 @@ If you want to use a different `.aar` file as mentioned in the ([Pay Sprint Onbo
 	}
 
 	ext {
-	    PaySprintOnboardingLibPath= "app/libs/<sdk_file_name>.aar"
+	    PaySprintOnboardingSDKPath= "app/libs/<sdk_file_name>.aar"
 	}
 ```
 
