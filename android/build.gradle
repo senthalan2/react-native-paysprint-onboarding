@@ -80,7 +80,7 @@ repositories {
 
 def kotlin_version = getExtOrDefault("kotlinVersion")
 
-def getPaysprintAarPath(defaultAarPath = 'libs/onboardinglib-release.aar') {
+def getPaysprintAarPath(defaultAarPath = 'libs/onboardinglib_live-release.aar') {
     if (rootProject.hasProperty('PaySprintOnboardingSDKPath')) {
         // Use the path relative to the user’s project root
         return new File(rootProject.rootDir, rootProject.property('PaySprintOnboardingSDKPath')).absolutePath
@@ -104,6 +104,7 @@ dependencies {
   implementation "io.reactivex.rxjava2:rxandroid:2.0.1"
   implementation 'com.google.code.gson:gson:2.8.2'
   implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.9.4'
+  implementation group: 'javax.xml.stream', name: 'stax-api', version: '1.0-2'
 
   implementation(platform("com.squareup.okhttp3:okhttp-bom:4.12.0"))
   implementation("com.squareup.okhttp3:okhttp")
