@@ -12,9 +12,9 @@ npm  install  react-native-paysprint-onboarding
 
 ```
 
-### Android Setup (Optional)
+### Android Setup
 
-#### 1. Add `.aar` dependency
+#### 1. Add `.aar` dependency (Optional)
 
 By default, the package includes the **Pay Sprint Live Mobile SDK** `.aar` file inside `react-native-paysprint-onboarding/android/libs`.
 
