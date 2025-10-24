@@ -14,29 +14,33 @@ npm  install  react-native-paysprint-onboarding
 
 ### Android Setup
 
-#### 1. Add `.aar` dependency (Optional)
+#### 1. Add `.aar` dependency
 
-By default, the package includes the **Pay Sprint Live Mobile SDK** `.aar` file inside `react-native-paysprint-onboarding/android/libs`.
+Download the required `.aar` from the [Pay Sprint Onboarding Mobile SDK Docs](https://pay-sprint.readme.io/reference/onboarding-mobile-sdk) and place it in your app module:
 
-If you want to use a different `.aar` file as mentioned in the ([Pay Sprint Onboarding Mobile SDK Docs](https://pay-sprint.readme.io/reference/onboarding-mobile-sdk)), follow the steps below:
+`android/app/libs/onboardinglib_live-release.aar`
 
-1. Place your `.aar` file in your app project at:
-   `android/app/libs/<sdk_file_name>.aar`
-2. Add a property in your root `android/build.gradle` below the `buildscript`:
+⚠️ Make sure the filename matches exactly, including extension and case.
+
+#### 2. Configure Gradle to include local `.aar` files
+
+Open your app module's `android/app/build.gradle` and ensure there is a `repositories` block.
+
+- If it exists, add the `flatDir` line inside it:
 
 ```js
-	buildscript {
-		...
-	}
-
-	ext {
-	    PaySprintOnboardingSDKPath= "app/libs/<sdk_file_name>.aar"
-	}
+repositories {
+    google()
+    mavenCentral()
+    flatDir {
+        dirs 'libs'  // <- This tells Gradle to look in android/app/libs for .aar files
+    }
+}
 ```
 
-The package will automatically resolve the path and use your `.aar` instead of the bundled one.
+- If the `repositories` block does not exist, add the whole block above.
 
-#### 2. Update gradle.properties
+#### 3. Update gradle.properties
 
 Add the following line to your `android/gradle.properties` file in your project:
 
